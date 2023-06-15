@@ -10,7 +10,7 @@
  * This dictionary is used for a file with no extension. It maps the MIME type
  * (as returned by file(1)) onto an appropriate thumbnail badge.
  */
-static NSDictionary *mimeTypeToBadgeMap() {
+static NSDictionary *mimeTypeToBadgeMap(void) {
   return @{
     @"application/xml": @"xml",
     @"text/x-c"       : @"C",
@@ -26,7 +26,7 @@ static NSDictionary *mimeTypeToBadgeMap() {
 /**
  * Some formats, e.g. Makefiles, have well-known names and no extension.
  */
-static NSDictionary *filenameRegexToBadgeMap() {
+static NSDictionary *filenameRegexToBadgeMap(void) {
   return @{
     @"Makefile" : @"make"
   };
